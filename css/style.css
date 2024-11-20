@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@font-face {
+  font-family: "SolCondensed";
+  src: url("/fonts/Sol\ Condensed\ W01\ Bold.ttf") format("truetype");
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: #0c0c0c;
