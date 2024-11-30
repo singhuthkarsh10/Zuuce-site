@@ -874,4 +874,9 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+.case_section .full_width_image {
+  width: 100%; /* Ensures the image takes the full width of the parent */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes inline spacing */
+}
 /*# sourceMappingURL=style.css.map */
