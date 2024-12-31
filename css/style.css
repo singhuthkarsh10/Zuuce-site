@@ -912,6 +912,7 @@ body {
   padding: 0 100px; /* Increased padding on the sides to push boxes away from the edges */
 }
 /* Box */
+/* Box */
 .box1 {
   border-radius: 40px;
   position: relative;
@@ -921,7 +922,9 @@ body {
   width: 90%; /* Reduced width of the box */
   margin: 0 auto; /* Centers the box within the container */
   height: 550px; /* Increased height of the box */
+  background-color: #052c54; /* Set background color of the box */
 }
+
 
 
 
@@ -962,7 +965,7 @@ body {
   font-weight: 700; /* Bold font for the heading */
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 30px; /* Reduced size for better fit */
+  font-size: 30px auto; /* Reduced size for better fit */
   letter-spacing: 2px;
   color: #ffffff;
   display: block;
@@ -974,7 +977,7 @@ body {
   font-weight: normal;
   color: #ffffff;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 16px auto;
   overflow: visible; /* Ensure text is not hidden */
   white-space: normal; /* Allow text to wrap */
   word-wrap: break-word; /* Ensure long words break and wrap properly */
@@ -1001,7 +1004,6 @@ body {
   position: relative; /* Use relative positioning for adjustments */
   top: -30px; /* Adjust the vertical position of the heading */
   left: -10px; /* Adjust the horizontal position of the heading */
-  font-size: 30px; /* You can adjust the font size if needed */
   text-align: center; /* Center the heading text (optional, based on your layout) */
   color: #ffffff; /* Ensure the color is white to contrast with the background */
 }
@@ -1009,7 +1011,6 @@ body {
   position: relative; /* Use relative positioning for adjustments */
   top: -30px; /* Adjust the vertical position of the heading */
   left: -10px; /* Adjust the horizontal position of the heading */
-  font-size: 16px; /* You can adjust the font size if needed */
   text-align: center; /* Center the heading text (optional, based on your layout) */
   color: #ffffff; /* Ensure the color is white to contrast with the background */
 }
@@ -1047,8 +1048,62 @@ body {
     font-size: 14px; /* Adjust paragraph size */
   }
 
-  .overlay ul li {
+  .overlay ul li { 
     font-size: 14px; /* Adjust list item font size */
+  }
+}
+
+/* For very small screens (e.g., mobile), ensure 1 box per row */
+@media (max-width: 480px) {
+  .box-area {
+    grid-template-columns: 1fr; /* Stack the boxes vertically */
+  }
+}
+/* For Tablets (max-width 1024px) */
+@media (max-width: 1024px) {
+  .box-area {
+    padding: 0 30px; /* Adjust padding for large tablets */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Reduce box width further */
+  }
+
+  .box {
+    margin-bottom: 20px; /* Ensure space between boxes */
+  }
+
+  .overlay h3 {
+    font-size: 20px; /* Adjust heading size on larger tablets */
+  }
+
+  .overlay p {
+    font-size: 14.5px; /* Adjust paragraph size for tablets */
+  }
+
+  .overlay ul li {
+    font-size: 14px; /* Adjust list item font size for tablets */
+  }
+}
+
+/* For smaller tablets (max-width 768px) */
+@media (max-width: 768px) {
+  .box-area {
+    padding: 0 10px; /* Decrease padding on smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Reduce box width further on smaller screens */
+  }
+
+  .box {
+    margin-bottom: 20px; /* Ensure space between boxes */
+  }
+
+  .overlay h3 {
+    font-size: 28px; /* Adjust heading size on smaller screens */
+  }
+
+  .overlay p {
+    font-size: 16px; /* Adjust paragraph size */
+  }
+
+  .overlay ul li { 
+    font-size: 15px; /* Adjust list item font size */
   }
 }
 
